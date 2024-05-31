@@ -15,7 +15,7 @@ To address these issues, I created Yusra. With Yusra, you can load a JSON file a
 yusra load filename.json
 # this will load the file into yusra's database and gives you a prompt that you can run SQL SQL queries on
 ```
-
+> Please note that the JSON file has to be an array of objects, this is a limitation yusra will overcome very soon!
 ```bash
 yusra>select * from filename;
 ```
