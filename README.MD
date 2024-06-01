@@ -10,16 +10,32 @@ JSON is an incredibly popular encoding format, widely used by almost every API t
 
 To address these issues, I created Yusra. With Yusra, you can load a JSON file and query it using SQL. This allows me to gain valuable insights into the dataset and makes working with it much easier. Additionally, I can perform joins by loading multiple sets, provided there is a foreign key in the JSON dataset.
 
+### Installation
+**__You need to have [Golang](https://go.dev/doc/install) and [cmake](https://cmake.org/download/) installed locally__**
+
+You can the [releases](https://github.com/mohammedbalila/jsondb/releases/) to download the binary directly or clone the repo and build it locally
+
+```bash
+git clone https://github.com/mohammedbalila/yusra.git && cd yusra 
+```
+
+```bash
+make build
+```
+
+```bash
+chmod +x yusra && mv /usr/local/bin/
+```
+
 ### How to use
 ```bash
 yusra load filename.json
-# this will load the file into yusra's database and gives you a prompt that you can run SQL SQL queries on
+# this will load the file into yusra's database and gives you a prompt that you can run SQL queries on
 ```
 > Please note that the JSON file has to be an array of objects, this is a limitation yusra will overcome very soon!
 ```bash
 yusra>select * from filename;
 ```
-
 
 ```bash
 yusra>help
